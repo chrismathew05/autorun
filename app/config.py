@@ -30,3 +30,6 @@ with open("config.json") as file:
 
     # relative path to temp dir to house input/output files
     _TEMP_DIR = config_dict["_TEMP_DIR"]
+
+    # folder id of test content
+    _TEST_FOLDER_ID = config_dict["_TEST_FOLDER_ID"]
