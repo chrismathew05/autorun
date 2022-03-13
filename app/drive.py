@@ -150,12 +150,12 @@ class GDrive:
         :param temp_dir: path to temp directory, defaults to _TEMP_DIR
         """
 
-        fh = io.FileIO(f"{temp_dir}/input/{file_name}", "wb")
-        downloader = MediaIoBaseDownload(fh, file_request)
-        done = False
-        while done is False:
-            status, done = downloader.next_chunk()
-            logger.info("Download %d%%." % int(status.progress() * 100))
+        with io.FileIO(f"{temp_dir}/input/{file_name}", "wb") as fh:
+            downloader = MediaIoBaseDownload(fh, file_request)
+            done = False
+            while done is False:
+                status, done = downloader.next_chunk()
+                logger.info("Download %d%%." % int(status.progress() * 100))
 
     def upload_file(
         self, file_name: str, file_path: str, output_folder_id: str

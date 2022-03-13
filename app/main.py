@@ -4,7 +4,6 @@ from drive import GDrive
 import time
 import os
 import shutil
-import subprocess
 import traceback
 import logging
 
@@ -67,6 +66,7 @@ def main() -> None:
             return
 
         logger.info(f"No files for {user}")
+    gdrive.service.close()
 
 
 if __name__ == "__main__":

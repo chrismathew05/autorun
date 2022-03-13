@@ -5,6 +5,6 @@ auth/credentials.json
 auth/token.json
 temp/input/*
 temp/output/*
-test/testing.log
+app/testing.log
 experiment/
 config.json
