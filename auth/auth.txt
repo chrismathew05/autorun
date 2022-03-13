@@ -1,0 +1,1 @@
+Place credentials.json in this "auth" folder - token.json will then be generated here!
