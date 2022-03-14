@@ -3,7 +3,7 @@ Usage
 
 Usage is simple:
 
-1. Create your python/matlab script, ensuring that somewhere in the script, output is saved to ``temp/output/``
+1. Create your python/matlab script, ensuring that somewhere in the script, output is saved to ``../temp/output/``
 2. Create a bash script named ``run.sh``. This script should install necessary requirements, call the python/matlab script, and uninstall once complete. Example below:
 
 .. code-block:: console
