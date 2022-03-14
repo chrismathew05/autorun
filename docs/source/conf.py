@@ -14,7 +14,13 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath("../../app/"))
-autodoc_mock_imports = ["app/config.json"]
+
+on_rtd = os.environ.get("READTHEDOCS") == "True"
+if on_rtd:
+    os.system(f"touch app/config.json")
+    os.system(
+        """echo '{"_USER_FOLDERS": {"USERNAME": {"inputFolderId": "XXX","outputFolderId": "XXX"}},"_TEMP_DIR": "temp","_TEST_FOLDER_ID": "XXX","_SENDGRID_API_KEY": "XXX"}' >> app/config.json"""
+    )
 
 # -- Project information -----------------------------------------------------
 
