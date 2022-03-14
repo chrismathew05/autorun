@@ -40,7 +40,7 @@ yes | pip uninstall -r temp/input/requirements-new.txt
 4. Run `autorun.sh`. Results should appear in your **Output** folder after execution.
 
 ## Documentation
-This project is documented with [Sphinx](https://www.sphinx-doc.org/en/master/tutorial/first-steps.html).
+The documentation for this project can be found [here](https://chrismathew05-autorun.readthedocs.io/en/latest/?).
 
 ## TODO
 - Implement email notifications for when jobs finish processing
