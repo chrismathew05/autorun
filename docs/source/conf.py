@@ -17,9 +17,11 @@ sys.path.insert(0, os.path.abspath("../../app/"))
 
 on_rtd = os.environ.get("READTHEDOCS") == "True"
 if on_rtd:
-    os.system(f"touch config.json")
+    rtd_config_path = "home/docs/checkouts/readthedocs.org/user_builds/chrismathew05-autorun/checkouts/latest/docs/app/config.json"
+    os.system(f"touch {rtd_config_path}")
     os.system(
-        """echo '{"_USER_FOLDERS": {"USERNAME": {"inputFolderId": "XXX","outputFolderId": "XXX"}},"_TEMP_DIR": "temp","_TEST_FOLDER_ID": "XXX","_SENDGRID_API_KEY": "XXX"}' >> config.json"""
+        """echo '{"_USER_FOLDERS": {"USERNAME": {"inputFolderId": "XXX","outputFolderId": "XXX"}},"_TEMP_DIR": "temp","_TEST_FOLDER_ID": "XXX","_SENDGRID_API_KEY": "XXX"}' >> """
+        + rtd_config_path
     )
 
 # -- Project information -----------------------------------------------------
