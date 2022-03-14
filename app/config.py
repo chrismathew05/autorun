@@ -27,19 +27,25 @@ res = requests.get(mime_mapping_url)
 if res.status_code == 200:
     _EXT_TO_MIME_MAP = res.json()
 
-config_path = os.path.abspath("../app/config.json")
-with open(config_path) as file:
-    config_dict = json.load(file)
+on_rtd = os.environ.get("READTHEDOCS") == "True"
+if on_rtd:
+    _USER_FOLDERS = (
+        _TEMP_DIR
+    ) = _TEST_FOLDER_ID = _SENDGRID_API_KEY = _SENDGRID_EMAIL = ""
+else:
+    config_path = os.path.abspath("../app/config.json")
+    with open(config_path) as file:
+        config_dict = json.load(file)
 
-    # GDrive folder names and ids
-    _USER_FOLDERS = config_dict["_USER_FOLDERS"]
+        # GDrive folder names and ids
+        _USER_FOLDERS = config_dict["_USER_FOLDERS"]
 
-    # relative path to temp dir to house input/output files
-    _TEMP_DIR = config_dict["_TEMP_DIR"]
+        # relative path to temp dir to house input/output files
+        _TEMP_DIR = config_dict["_TEMP_DIR"]
 
-    # folder id of test content
-    _TEST_FOLDER_ID = config_dict["_TEST_FOLDER_ID"]
+        # folder id of test content
+        _TEST_FOLDER_ID = config_dict["_TEST_FOLDER_ID"]
 
-    # sendgrid api to send email notifications
-    _SENDGRID_API_KEY = config_dict["_SENDGRID_API_KEY"]
-    _SENDGRID_EMAIL = config_dict["_SENDGRID_EMAIL"]
+        # sendgrid api to send email notifications
+        _SENDGRID_API_KEY = config_dict["_SENDGRID_API_KEY"]
+        _SENDGRID_EMAIL = config_dict["_SENDGRID_EMAIL"]
