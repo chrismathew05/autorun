@@ -1,0 +1,16 @@
+2022-03-13 22:07:45,710:root:Logging setup complete!
+2022-03-13 22:07:45,710:root:========= STARTING SCRIPT =========
+2022-03-13 22:07:45,715:googleapiclient.discovery_cache:file_cache is only supported with oauth2client<4.0.0
+2022-03-13 22:07:45,718:drive:Successful authentication.
+2022-03-13 22:07:46,059:root:No files for Jason
+2022-03-13 22:07:46,326:root:Files found for Chris. Downloading the following: [('1J0uzomwuIYA2thkzYEygbQK0GTtp1acT', 'run.sh', 'text/x-sh'), ('12dUSeNby3sQ2m781IoEJ_eqLz_B-EWl8', 'test.py', 'text/plain'), ('1N8cdDcVk1EAyIjJiX_RliXPYeWFeRn1c', 'requirements-new.txt', 'text/plain')]
+2022-03-13 22:07:46,326:drive:Downloading run.sh (text/x-sh)...
+2022-03-13 22:07:46,702:drive:Download 100%.
+2022-03-13 22:07:46,703:drive:Downloading test.py (text/plain)...
+2022-03-13 22:07:46,998:drive:Download 100%.
+2022-03-13 22:07:46,999:drive:Downloading requirements-new.txt (text/plain)...
+2022-03-13 22:07:47,356:drive:Download 100%.
+2022-03-13 22:07:47,357:root:Running downloaded script...
+2022-03-13 22:08:13,005:root:Uploading script output...
+2022-03-13 22:08:14,567:drive:Uploaded temp/output/test.csv
+2022-03-13 22:08:14,567:root:Script complete.

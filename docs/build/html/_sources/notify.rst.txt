@@ -1,0 +1,5 @@
+Notify
+======
+
+.. automodule:: notify
+    :members:

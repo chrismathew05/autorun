@@ -1,11 +1,18 @@
 #!/bin/bash
 
-echo RUNNING MAIN.PY...
-source venv/bin/activate
-python3 app/main.py
+echo === SETTING UP AUTORUN ===
 
-echo REINSTALLING REQUIREMENTS...
+echo Creating virtual environment...
+mkdir venv
+python3 -m venv venv
+source venv/bin/activate
+
+echo Installing requirements...
 pip install -r requirements.txt
 
-echo SCRIPT COMPLETE!
+echo Creating config.json...
+touch app/config.json
+echo '{"_USER_FOLDERS": {"USERNAME": {"inputFolderId": "XXX","outputFolderId": "XXX"}},"_TEMP_DIR": "temp","_TEST_FOLDER_ID": "XXX","_SENDGRID_API_KEY": "XXX"}' >> app/config.json
+
+echo SETUP COMPLETE!
 

@@ -1,7 +1,11 @@
+"""
+main.py - starting point of autorun execution
+"""
+
 from config import _USER_FOLDERS, _TEMP_DIR
 from drive import GDrive
+import notify
 
-import time
 import os
 import shutil
 import traceback
@@ -14,7 +18,7 @@ formatter = logging.Formatter("%(asctime)s:%(name)s:%(message)s")
 
 stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(formatter)
-file_handler = logging.FileHandler("test/testing.log")
+file_handler = logging.FileHandler("testing.log")
 file_handler.setLevel(logging.INFO)
 file_handler.setFormatter(formatter)
 
@@ -51,8 +55,8 @@ def main() -> None:
 
             # run downloaded script
             logger.info("Running downloaded script...")
-            os.system("chmod +x temp/input/run.sh")
-            os.system("temp/input/run.sh")
+            os.system(f"chmod +x {local_input}/run.sh")
+            os.system(f"{local_input}/run.sh")
 
             # upload output to GDrive
             logger.info(f"Uploading script output...")

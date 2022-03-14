@@ -1,5 +1,9 @@
-import main
+"""
+test_drive.py - Test drive.py functionality
+"""
+
 from config import _TEST_FOLDER_ID, _TEMP_DIR
+import main
 from drive import GDrive
 
 import os
